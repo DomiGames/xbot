@@ -38,14 +38,11 @@ ollama --version
 ollama list
 ```
 ###  3. Test Ollama
-Test TinyLlama in your terminal:bash
-
+Test TinyLlama in your terminal:
 ```bash
 ollama run tinyllama
 ```
-
 Enter:
-
 ```bash
 Generate a short reply (up to 50 characters) about anime.
 ```
@@ -54,6 +51,52 @@ Expect a response like:
 Love anime! What's your favorite show?
 ```
 Exit with Ctrl+D.
+
+###  4. Install ChromeDriver
+Check your Brave version at brave://version. Download the matching ChromeDriver
+```bash
+wget https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.115/linux64/chromedriver-linux64.zip
+unzip chromedriver-linux64.zip
+sudo mv chromedriver-linux64/chromedriver /usr/local/bin/
+sudo chmod +x /usr/local/bin/chromedriver
+```
+
+###  5. Set Up Python Environment
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+###  6. Configure Twitter Credentials
+Set environment variables
+```bash
+export TWITTER_USERNAME="your_username"
+export TWITTER_PASSWORD="your_password"
+echo 'export TWITTER_USERNAME="your_username"' >> ~/.bashrc
+echo 'export TWITTER_PASSWORD="your_password"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+###  Usage
+Run the bot
+```bash
+source venv/bin/activate
+python3 xbot.py
+```
+The bot will:Log into Twitter.
+Scroll the feed three times, processing up to five tweets per scroll.
+Analyze tweets with TinyLlama (offline).
+Like and reply with short responses (e.g., "Love anime! What's your favorite?").
+
+NotesTwitter Automation Rules: Limit interactions to <50 daily actions to avoid bans. Use a test account. Resolve CAPTCHAs manually.
+Content Warning: Keywords like "weed" may trigger Twitter’s content moderation. Consider safer keywords (e.g., "python," "ai").
+Performance: TinyLlama requires ~1-2GB RAM. Reduce num_predict in xbot.py if slow.
+Tweet Extraction: If Twitter’s UI changes, update get_tweet_text selectors (e.g., [data-testid="tweetText"] or div[lang]).
+
+
+
+
 
 
 
