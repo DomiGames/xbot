@@ -24,5 +24,12 @@ A Python-based Twitter bot that uses TinyLlama (via Ollama) to analyze tweets of
 git clone https://github.com/DomiGames/xbot.git
 cd xbot
 ```
+### 2.  Install Ollama
 Install Ollama and pull the TinyLlama model:
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+sudo systemctl start ollama
+sudo systemctl enable ollama
+ollama pull tinyllama
+```
 
