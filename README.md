@@ -23,3 +23,6 @@ A Python-based Twitter bot that uses TinyLlama (via Ollama) to analyze tweets of
 ```bash
 git clone https://github.com/DomiGames/xbot.git
 cd xbot
+```
+Install Ollama and pull the TinyLlama model:
+
