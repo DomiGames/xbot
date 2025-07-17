@@ -32,4 +32,29 @@ sudo systemctl start ollama
 sudo systemctl enable ollama
 ollama pull tinyllama
 ```
+Verify Ollama and model:
+```bash
+ollama --version
+ollama list
+```
+###  3. Test Ollama
+Test TinyLlama in your terminal:bash
+
+```bash
+ollama run tinyllama
+```
+
+Enter:
+
+```bash
+Generate a short reply (up to 50 characters) about anime.
+```
+Expect a response like:
+```bash
+Love anime! What's your favorite show?
+```
+Exit with Ctrl+D.
+
+
+
 
