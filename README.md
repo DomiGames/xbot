@@ -84,15 +84,16 @@ Run the bot
 source venv/bin/activate
 python3 xbot.py
 ```
-The bot will:Log into Twitter.
-Scroll the feed three times, processing up to five tweets per scroll.
-Analyze tweets with TinyLlama (offline).
-Like and reply with short responses (e.g., "Love anime! What's your favorite?").
+The bot will:
+- Log into Twitter.
+- Scroll the feed three times, processing up to five tweets per scroll.
+- Analyze tweets with TinyLlama (offline).
+- Like and reply with short responses (e.g., "Love anime! What's your favorite?").
 
-NotesTwitter Automation Rules: Limit interactions to <50 daily actions to avoid bans. Use a test account. Resolve CAPTCHAs manually.
-Content Warning: Keywords like "weed" may trigger Twitter’s content moderation. Consider safer keywords (e.g., "python," "ai").
-Performance: TinyLlama requires ~1-2GB RAM. Reduce num_predict in xbot.py if slow.
-Tweet Extraction: If Twitter’s UI changes, update get_tweet_text selectors (e.g., [data-testid="tweetText"] or div[lang]).
+###  Notes
+- **Twitter Automation Rules:** Limit interactions to <50 daily actions to avoid bans. Use a test account. Resolve CAPTCHAs manually.
+- **Performance:** TinyLlama requires ~1-2GB RAM. Reduce num_predict in xbot.py if slow.
+- **Tweet Extraction:** If Twitter’s UI changes, update get_tweet_text selectors (e.g., [data-testid="tweetText"] or div[lang]).
 
 
 
