@@ -78,7 +78,7 @@ echo 'export TWITTER_PASSWORD="your_password"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-###  Usage
+##  Usage
 Run the bot
 ```bash
 source venv/bin/activate
@@ -90,7 +90,7 @@ The bot will:
 - Analyze tweets with TinyLlama (offline).
 - Like and reply with short responses (e.g., "Love anime! What's your favorite?").
 
-###  Notes
+##  Notes
 - **Twitter Automation Rules:** Limit interactions to <50 daily actions to avoid bans. Use a test account. Resolve CAPTCHAs manually.
 - **Performance:** TinyLlama requires ~1-2GB RAM. Reduce num_predict in xbot.py if slow.
 - **Tweet Extraction:** If Twitter’s UI changes, update get_tweet_text selectors (e.g., [data-testid="tweetText"] or div[lang]).
